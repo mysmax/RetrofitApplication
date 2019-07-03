@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <!-- Sliding drawer contatinig one handle view and one content layout that is hidden -->
+    <SlidingDrawer
+        android:id="@+id/sliding_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:content="@+id/contentLayout"
+        android:handle="@+id/slideButton"
+        android:orientation="horizontal"
+        android:rotation="0"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/transparent"
+        android:padding="0dip" >
+    <!-- Handle button -->
+        <RelativeLayout
+            android:id="@+id/slideButton"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:text=""
+                android:textColor="#ffffff" >
+            </Button>
+        </RelativeLayout>
+
+        <!-- Content Layout -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:rotation="0"
+        android:padding="0dip"
+        android:elevation="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/slide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light"
+            android:orientation="horizontal"
+            android:clickable="true"
+            >
+        </LinearLayout>
+    </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>
