@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_tripId"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="START"
+        android:textColor="@android:color/black"
+        android:background="@null"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_width="90dp"
+        android:layout_height="40dp" />
+
+</RelativeLayout>
