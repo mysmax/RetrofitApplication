@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -82,7 +81,7 @@ public class FileActivity extends AppCompatActivity {
                 buffer.append(line);
             }
 
-            Log.d("FileStore", buffer.toString());
+            //Log.d("FileStore", buffer.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
