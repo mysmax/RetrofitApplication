@@ -1,4 +1,4 @@
-#Tue Jul 02 15:02:46 IST 2019
+#Thu Jul 04 12:45:59 IST 2019
 base.0=/Users/ChethanRGowda/Documents/android_work_space/RetrofitApplication/app/build/intermediates/transforms/dexMerger/debug/7
 path.0=classes.dex
 renamed.0=classes.dex

@@ -60,7 +60,7 @@ public class ServiceActivity extends AppCompatActivity {
         });
         /**/
 
-        // O onwards service changed to Jobservice, JobIntentService
+        // service changed to Jobservice, JobIntentService
         // JOB Service
         // TO Start Use JobScheduler
         /*
@@ -68,7 +68,6 @@ public class ServiceActivity extends AppCompatActivity {
         ComponentName componentName = new ComponentName(getApplicationContext(), PollJobService.class);
         JobInfo jobInfo = new JobInfo.Builder(1, componentName).setMinimumLatency(1).build();
         jobScheduler.schedule(jobInfo);
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // JOB Service

@@ -14,6 +14,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -41,7 +43,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -77,6 +79,18 @@
         <activity
             android:name="mysmax.com.retrofitapplication.activity.TwoSidesActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="mysmax.com.retrofitapplication.activity.FileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mysmax.com.retrofitapplication.connectivity.BluetoothActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <service android:name="mysmax.com.retrofitapplication.service.Gps" >
             <intent-filter>

@@ -284,9 +284,9 @@ Knowledge into BLE
         // Screen
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-         int height = metrics.heightPixels;
-         int width = metrics.widthPixels;
-         Log.e("Screen ", " Width : " + width + " Height : "  + height);
+        int height = metrics.heightPixels;
+        int width = metrics.widthPixels;
+        Log.e("Screen ", " Width : " + width + " Height : "  + height);
         */
 
         /*
@@ -494,6 +494,7 @@ Knowledge into BLE
                 Log.e("BackGroundCheck","DelayStopTriggered At " + Calendar.getInstance().getTime());
             }
         },2*60*1000);
+
     }
 
     @SuppressLint("MissingPermission")

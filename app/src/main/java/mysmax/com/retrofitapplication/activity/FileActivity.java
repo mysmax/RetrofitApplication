@@ -28,6 +28,7 @@ public class FileActivity extends AppCompatActivity {
 
     private void internalFileStore()
     {
+        //Include Write External Storage
         // Create a file in the Internal Storage
         String fileName = "MyFile";
         String content = "hello world";
@@ -67,13 +68,13 @@ public class FileActivity extends AppCompatActivity {
         */
     }
 
-    private void internalFileStoreWithCacheFile()
+    private void readInternalFileFromCacheDir()
     {
         BufferedReader input = null;
         File file = null;
         try {
             file = new File(getCacheDir(), "MyCache"); // Pass getFilesDir() and "MyFile" to read file
-
+             // Read
             input = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
             String line;
             StringBuffer buffer = new StringBuffer();
