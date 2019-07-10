@@ -25,7 +25,6 @@ public class ContentProviderActivity extends AppCompatActivity {
         // Add a new student record
         ContentValues values = new ContentValues();
         values.put(StudentsProvider.NAME, ((EditText)findViewById(R.id.editText2)).getText().toString());
-
         values.put(StudentsProvider.GRADE, ((EditText)findViewById(R.id.editText3)).getText().toString());
 
         Uri uri = getContentResolver().insert(StudentsProvider.CONTENT_URI, values);
@@ -37,8 +36,7 @@ public class ContentProviderActivity extends AppCompatActivity {
         // Retrieve student records
         String URL = "content://com.mysmax.provider.student";
         Uri students = Uri.parse(URL);
-        Cursor c = managedQuery(students, null, null, null, "name");
-
+        Cursor  c = getContentResolver().query(students, null, null, null, "name");
         if (c.moveToFirst()) {
             do{
                 Toast.makeText(this,

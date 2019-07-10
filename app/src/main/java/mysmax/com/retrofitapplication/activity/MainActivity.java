@@ -494,7 +494,6 @@ Knowledge into BLE
                 Log.e("BackGroundCheck","DelayStopTriggered At " + Calendar.getInstance().getTime());
             }
         },2*60*1000);
-
     }
 
     @SuppressLint("MissingPermission")

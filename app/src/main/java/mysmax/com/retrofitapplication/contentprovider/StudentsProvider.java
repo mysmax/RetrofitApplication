@@ -33,8 +33,8 @@ public class StudentsProvider extends ContentProvider {
 
     static final int STUDENTS = 1;
     static final int STUDENT_ID = 2;
-
     static final UriMatcher uriMatcher;
+
     static{
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
         uriMatcher.addURI(PROVIDER_NAME, "students", STUDENTS);
@@ -45,7 +45,6 @@ public class StudentsProvider extends ContentProvider {
     public boolean onCreate() {
         Context context = getContext();
         ProviderDBHelper dbHelper = new ProviderDBHelper(context);
-
         /**
          * Create a write able database which will trigger its
          * creation if it doesn't already exist.
@@ -79,9 +78,7 @@ public class StudentsProvider extends ContentProvider {
              */
             sortOrder = NAME;
         }
-
-        Cursor c = qb.query(db,	projection,	selection,
-                selectionArgs,null, null, sortOrder);
+        Cursor c = qb.query(db,	projection,	selection, selectionArgs,null, null, sortOrder);
         /**
          * register to watch a content URI for changes
          */
@@ -115,7 +112,6 @@ public class StudentsProvider extends ContentProvider {
          * Add a new student record
          */
         long rowID = db.insert(	STUDENTS_TABLE_NAME, "", values);
-
         /**
          * If record is added successfully
          */
@@ -144,7 +140,6 @@ public class StudentsProvider extends ContentProvider {
             default:
                 throw new IllegalArgumentException("Unknown URI " + uri);
         }
-
         getContext().getContentResolver().notifyChange(uri, null);
         return count;
     }
@@ -156,16 +151,12 @@ public class StudentsProvider extends ContentProvider {
             case STUDENTS:
                 count = db.update(STUDENTS_TABLE_NAME, values, selection, selectionArgs);
                 break;
-
             case STUDENT_ID:
-                count = db.update(STUDENTS_TABLE_NAME, values,
-                        _ID + " = " + uri.getPathSegments().get(1) +
-                                (!TextUtils.isEmpty(selection) ? " AND (" +selection + ')' : ""), selectionArgs);
+                count = db.update(STUDENTS_TABLE_NAME, values, _ID + " = " + uri.getPathSegments().get(1) + (!TextUtils.isEmpty(selection) ? " AND (" +selection + ')' : ""), selectionArgs);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI " + uri );
         }
-
         getContext().getContentResolver().notifyChange(uri, null);
         return count;
     }
